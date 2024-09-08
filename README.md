@@ -1,6 +1,8 @@
-With this handy tool, you will now be able to PERMANENTLY FORCE Gearbox whine either for ALL cars or for cars of your choosing. 
+PROSTREET Whine Mod. © ropsli No Rights Reserved.
 
-Unfortunately, it does not fix the bug that causes whine sound to disappear after running a drag race. When this happens, you must quit to main menu and reload the raceday.
+Tool allowing users to permanently force Gearbox whine either for ALL cars or for cars of their choosing. 
+
+Unfortunately, it does not fix the bug that causes whine sound to disappear after running a drag race. When this happens, you must quit to main menu and reload the raceday. (This is also a bug in the vanilla game.)
 
 Usage:
 Place ProStreetGearWhine.ini and ProStreetGearWhine.asi into the scripts folder, found in your Game Installation directory.
