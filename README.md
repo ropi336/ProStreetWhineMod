@@ -6,3 +6,9 @@ Unfortunately, it does not fix the bug that causes whine sound to disappear afte
 
 Requirements:
 A DLL ASI loader.
+
+
+Credits:
+ARCHIE's HUD mod for the mid-race car XNAME mem address and multi layer pointer read function.
+NFSPSExOpts for various memory addresses, include folder (memory injector, .ini reader) and MSVC project settings
+NFSPluginSDK for the TrannyOnAllCars mem address.
