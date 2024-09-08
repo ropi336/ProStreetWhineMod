@@ -1,4 +1,6 @@
-With this handy tool, you will now be able to PERMANENTLY FORCE Gearbox whine either for ALL cars or for cars of your choosing. This also fixes the infamous car whine sound disappearing randomly after you do a certain number of races on a raceday (or whatever else can cause this idk)
+With this handy tool, you will now be able to PERMANENTLY FORCE Gearbox whine either for ALL cars or for cars of your choosing. 
+
+Unfortunately, it does not fix the bug that causes whine sound to disappear after running a drag race. When this happens, you must quit to main menu and reload the raceday.
 
 Usage:
 Place ProStreetGearWhine.ini and ProStreetGearWhine.asi into the scripts folder, found in your Game Installation directory.
@@ -12,6 +14,11 @@ An example of a ProStreetGearWhine.ini that will force whine for the following c
 
 [Gameplay]
 CarList=BMWM3,240SX,350Z
+
+An example of a ProStreetGearWhine.ini that will force whine for ALL cars: 
+
+[Gameplay]
+CarList=ALL
 
 Requirements:
 A DLL ASI loader.
