@@ -66,6 +66,7 @@ void Init()
 	Tranny = iniReader.ReadInteger("Gameplay", "Tranny", Tranny) == 0;
 	CreateThread(0, 0, (LPTHREAD_START_ROUTINE)&Thing, NULL, 0, NULL);
 	SplitString(CarInput);
+	injector::MakeJMP(0x0051F3E4, 0x0051F48D, true);
 
 	if (CarInput == std::string("ALL"))
 	{
