@@ -2,7 +2,7 @@ PROSTREET Whine Mod. © ropsli No Rights Reserved.
 
 This tool allows users to permanently force Gearbox whine either for ALL cars or for cars of their choosing.
 
-Fixed the infamous transmission whine disappearing sound bug
+Yes, it fixes the infamous transmission whine disappearing sound bug
 
 Requirements:
 A DLL ASI loader.
