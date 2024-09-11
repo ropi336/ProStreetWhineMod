@@ -12,9 +12,9 @@
 
 DWORD WINAPI Thing(LPVOID);
 
-bool IsRacing, Tranny, CarMatch, ShouldRun = true;
-int ThreadDelay;
-char* IntroMovieName, * PlayerName, CurrentCar, * CCar;
+bool IsRacing, CarMatch, ShouldRun = true;
+int ThreadDelay = 5;
+char* CCar;
 std::string CurCar;
 std::string CarInput;
 std::vector<std::string> carList;
@@ -63,7 +63,6 @@ void Init()
 	// Read values from .ini
 	CIniReader iniReader("ProStreetGearWhine.ini");
 	CarInput = iniReader.ReadString("Gameplay", "CarList", CarInput);
-	Tranny = iniReader.ReadInteger("Gameplay", "Tranny", Tranny) == 0;
 	CreateThread(0, 0, (LPTHREAD_START_ROUTINE)&Thing, NULL, 0, NULL);
 	SplitString(CarInput);
 	injector::MakeJMP(0x0051F3E4, 0x0051F48D, true);
