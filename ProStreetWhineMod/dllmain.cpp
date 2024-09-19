@@ -63,14 +63,19 @@ void Init()
 	// Read values from .ini
 	CIniReader iniReader("ProStreetGearWhine.ini");
 	CarInput = iniReader.ReadString("Gameplay", "CarList", CarInput);
-	CreateThread(0, 0, (LPTHREAD_START_ROUTINE)&Thing, NULL, 0, NULL);
 	SplitString(CarInput);
 	injector::MakeJMP(0x0051F3E4, 0x0051F48D, true);
 
-	if (CarInput == std::string("ALL"))
+	if (CarInput == std::string("ALL") || CarInput == std::string(""))
 	{
 		injector::WriteMemory<unsigned char>(0xAB09B8, 1, true);
 		ShouldRun = false;
+	}
+
+	//Do not create the thread if it's not needed
+	if (ShouldRun == true)
+	{
+		CreateThread(0, 0, (LPTHREAD_START_ROUTINE)&Thing, NULL, 0, NULL);
 	}
 }
 
@@ -88,7 +93,7 @@ bool ValidateCar()
 
 DWORD WINAPI Thing(LPVOID)
 {
-	while (ShouldRun)
+	while (true)
 	{
 		Sleep(ThreadDelay);
 
@@ -123,8 +128,10 @@ BOOL APIENTRY DllMain(HMODULE /*hModule*/, DWORD reason, LPVOID /*lpReserved*/)
 		uintptr_t base = (uintptr_t)GetModuleHandleA(NULL);
 
 		if (strstr((const char*)(base + (0xA49742 - base)), "ProStreet08Release.exe"))
+		{
 			Init();
-
+		}
+			
 		else
 		{
 			MessageBoxA(NULL, "This .exe is not supported.\nPlease use a NOCD v1.1 NFS.exe.", "ProStreetWhineMod", MB_ICONERROR);
