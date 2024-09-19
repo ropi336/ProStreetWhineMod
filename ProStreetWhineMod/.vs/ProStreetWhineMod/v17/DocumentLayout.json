@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{EBD3BC06-8C22-4884-B5C2-2706C799B6BF}|ProStreetWhineMod.vcxproj|C:\\EXCUSE_ME\\GAMES\\whineMod\\X3\\ProStreetWhineMod\\ProStreetWhineMod\\dllmain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{EBD3BC06-8C22-4884-B5C2-2706C799B6BF}|ProStreetWhineMod.vcxproj|solutionrelative:dllmain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBD3BC06-8C22-4884-B5C2-2706C799B6BF}|ProStreetWhineMod.vcxproj|C:\\EXCUSE_ME\\GAMES\\whineMod\\X3\\ProStreetWhineMod\\ProStreetWhineMod\\stdafx.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EBD3BC06-8C22-4884-B5C2-2706C799B6BF}|ProStreetWhineMod.vcxproj|solutionrelative:stdafx.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "stdafx.cpp",
+              "DocumentMoniker": "C:\\EXCUSE_ME\\GAMES\\whineMod\\X3\\ProStreetWhineMod\\ProStreetWhineMod\\stdafx.cpp",
+              "RelativeDocumentMoniker": "stdafx.cpp",
+              "ToolTip": "C:\\EXCUSE_ME\\GAMES\\whineMod\\X3\\ProStreetWhineMod\\ProStreetWhineMod\\stdafx.cpp",
+              "RelativeToolTip": "stdafx.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-19T21:12:43.937Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +41,7 @@
               "RelativeDocumentMoniker": "dllmain.cpp",
               "ToolTip": "C:\\EXCUSE_ME\\GAMES\\whineMod\\X3\\ProStreetWhineMod\\ProStreetWhineMod\\dllmain.cpp",
               "RelativeToolTip": "dllmain.cpp",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAADoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAD8AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-09-19T20:20:57.973Z",
               "EditorCaption": ""

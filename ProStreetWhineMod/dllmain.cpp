@@ -12,7 +12,7 @@
 
 DWORD WINAPI Thing(LPVOID);
 
-bool IsRacing, CarMatch, ShouldRun = true;
+bool IsRacing, CarMatch;
 int ThreadDelay = 5;
 char* CCar;
 std::string CurCar;
@@ -60,22 +60,29 @@ void SplitString(std::string stringIn)
 
 void Init()
 {
+	//Fixes whine bug
+	injector::MakeJMP(0x0051F3E4, 0x0051F48D, true);
+
 	// Read values from .ini
 	CIniReader iniReader("ProStreetGearWhine.ini");
 	CarInput = iniReader.ReadString("Gameplay", "CarList", CarInput);
-	SplitString(CarInput);
-	injector::MakeJMP(0x0051F3E4, 0x0051F48D, true);
-
-	if (CarInput == std::string("ALL") || CarInput == std::string(""))
+	if (CarInput.empty() == true)
 	{
-		injector::WriteMemory<unsigned char>(0xAB09B8, 1, true);
-		ShouldRun = false;
+		//Nothing
 	}
-
-	//Do not create the thread if it's not needed
-	if (ShouldRun == true)
+	else
 	{
-		CreateThread(0, 0, (LPTHREAD_START_ROUTINE)&Thing, NULL, 0, NULL);
+		if (CarInput == std::string("ALL"))
+		{
+			//Set TrannyOnAllCars to true
+			injector::WriteMemory<unsigned char>(0xAB09B8, 1, true);
+		}
+		else
+		{
+			//Load carlist into array vector
+			SplitString(CarInput);
+			CreateThread(0, 0, (LPTHREAD_START_ROUTINE)&Thing, NULL, 0, NULL);
+		}
 	}
 }
 
@@ -108,14 +115,13 @@ DWORD WINAPI Thing(LPVOID)
 
 		if (IsRacing)
 		{
-			CIniReader iniReader("ProStreetGearWhine.ini");
 			CurCar = GetCarName();
 			CCar = &CurCar[0];
-		}
-
-		if ((IsRacing == true) && ValidateCar() == true)
-		{
-			injector::WriteMemory<unsigned char>(0xAB09B8, 1, true);
+			if (ValidateCar() == true)
+			{
+				injector::WriteMemory<unsigned char>(0xAB09B8, 1, true);
+			}
+			Sleep(1000);
 		}
 	}
 	return 0;

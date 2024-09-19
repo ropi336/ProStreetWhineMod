@@ -1,4 +1,46 @@
-﻿  dllmain.cpp
-  stdafx.cpp
-C:\EXCUSE_ME\GAMES\whineMod\X3\ProStreetWhineMod\ProStreetWhineMod\dllmain.cpp(138,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
-C:\EXCUSE_ME\GAMES\whineMod\X3\ProStreetWhineMod\ProStreetWhineMod\stdafx.cpp(2,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "pch.h"' to your source?
+﻿  stdafx.cpp
+  dllmain.cpp
+C:\EXCUSE_ME\GAMES\whineMod\X3\ProStreetWhineMod\includes\ini_parser.hpp(183,67): warning C4310: cast truncates constant value
+  (compiling source file '/dllmain.cpp')
+      C:\EXCUSE_ME\GAMES\whineMod\X3\ProStreetWhineMod\includes\ini_parser.hpp(183,67):
+      the template instantiation context (the oldest one first) is
+          C:\EXCUSE_ME\GAMES\whineMod\X3\ProStreetWhineMod\includes\IniReader.h(86,15):
+          see reference to class template instantiation 'linb::basic_ini<char,std::basic_string<char,std::char_traits<char>,std::allocator<char>>,std::map<StringType,StringType,std::less<StringType>,std::allocator<std::pair<const StringType,StringType>>>,std::map<StringType,KeyContainer,std::less<StringType>,std::allocator<std::pair<const StringType,KeyContainer>>>>' being compiled
+          with
+          [
+              StringType=std::basic_string<char,std::char_traits<char>,std::allocator<char>>,
+              KeyContainer=std::map<std::basic_string<char,std::char_traits<char>,std::allocator<char>>,std::basic_string<char,std::char_traits<char>,std::allocator<char>>,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::allocator<std::pair<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>,std::basic_string<char,std::char_traits<char>,std::allocator<char>>>>>
+          ]
+          C:\EXCUSE_ME\GAMES\whineMod\X3\ProStreetWhineMod\includes\ini_parser.hpp(166,18):
+          while compiling class template member function 'bool linb::basic_ini<char,std::basic_string<char,std::char_traits<char>,std::allocator<char>>,std::map<StringType,StringType,std::less<StringType>,std::allocator<std::pair<const StringType,StringType>>>,std::map<StringType,KeyContainer,std::less<StringType>,std::allocator<std::pair<const StringType,KeyContainer>>>>::read_file(std::stringstream &)'
+          with
+          [
+              StringType=std::basic_string<char,std::char_traits<char>,std::allocator<char>>,
+              KeyContainer=std::map<std::basic_string<char,std::char_traits<char>,std::allocator<char>>,std::basic_string<char,std::char_traits<char>,std::allocator<char>>,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::allocator<std::pair<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>,std::basic_string<char,std::char_traits<char>,std::allocator<char>>>>>
+          ]
+              C:\EXCUSE_ME\GAMES\whineMod\X3\ProStreetWhineMod\includes\ini_parser.hpp(306,17):
+              see the first reference to 'linb::basic_ini<char,std::basic_string<char,std::char_traits<char>,std::allocator<char>>,std::map<StringType,StringType,std::less<StringType>,std::allocator<std::pair<const StringType,StringType>>>,std::map<StringType,KeyContainer,std::less<StringType>,std::allocator<std::pair<const StringType,KeyContainer>>>>::read_file' in 'linb::basic_ini<char,std::basic_string<char,std::char_traits<char>,std::allocator<char>>,std::map<StringType,StringType,std::less<StringType>,std::allocator<std::pair<const StringType,StringType>>>,std::map<StringType,KeyContainer,std::less<StringType>,std::allocator<std::pair<const StringType,KeyContainer>>>>::load_file'
+          with
+          [
+              StringType=std::basic_string<char,std::char_traits<char>,std::allocator<char>>,
+              KeyContainer=std::map<std::basic_string<char,std::char_traits<char>,std::allocator<char>>,std::basic_string<char,std::char_traits<char>,std::allocator<char>>,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::allocator<std::pair<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>,std::basic_string<char,std::char_traits<char>,std::allocator<char>>>>>
+          ]
+              C:\EXCUSE_ME\GAMES\whineMod\X3\ProStreetWhineMod\includes\IniReader.h(105,23):
+              see the first reference to 'linb::basic_ini<char,std::basic_string<char,std::char_traits<char>,std::allocator<char>>,std::map<StringType,StringType,std::less<StringType>,std::allocator<std::pair<const StringType,StringType>>>,std::map<StringType,KeyContainer,std::less<StringType>,std::allocator<std::pair<const StringType,KeyContainer>>>>::load_file' in 'CIniReader::CIniReader'
+          with
+          [
+              StringType=std::basic_string<char,std::char_traits<char>,std::allocator<char>>,
+              KeyContainer=std::map<std::basic_string<char,std::char_traits<char>,std::allocator<char>>,std::basic_string<char,std::char_traits<char>,std::allocator<char>>,std::less<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>,std::allocator<std::pair<const std::basic_string<char,std::char_traits<char>,std::allocator<char>>,std::basic_string<char,std::char_traits<char>,std::allocator<char>>>>>
+          ]
+  
+C:\EXCUSE_ME\GAMES\whineMod\X3\ProStreetWhineMod\includes\ini_parser.hpp(183,91): warning C4310: cast truncates constant value
+  (compiling source file '/dllmain.cpp')
+  
+C:\EXCUSE_ME\GAMES\whineMod\X3\ProStreetWhineMod\includes\ini_parser.hpp(183,115): warning C4310: cast truncates constant value
+  (compiling source file '/dllmain.cpp')
+  
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 842 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  ProStreetWhineMod.vcxproj -> C:\EXCUSE_ME\GAMES\whineMod\X3\ProStreetWhineMod\ProStreetWhineMod\Release\scripts\ProStreetWhineMod.asi
